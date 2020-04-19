@@ -33,7 +33,7 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.6'
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
     implementation 'com.android.support:support-v4:27.1.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.51'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.51"
 }
 repositories {
     mavenCentral()
