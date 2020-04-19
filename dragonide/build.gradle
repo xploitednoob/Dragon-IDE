@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.android.COMPILE_SDK_VERSION
+    defaultConfig {
+    	applicationId "com.theghosttechnology.dragonide"
+	minSdkVersion rootProject.ext.android.MIN_SDK_VERSION
+        targetSdkVersion rootProject.ext.android.TARGET_SDK_VERSION
+        versionCode 1
+        versionName '0.1 BETA'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //versionNameSuffix 'v0.1 BETA'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.nononsenseapps:filepicker:4.1.0'
+    implementation 'org.apache.commons:commons-lang3:3.6'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.51'
+}
+repositories {
+    mavenCentral()
+}

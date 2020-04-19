@@ -1,0 +1,24 @@
+name: Build Release
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v2
+    - name: Build Release
+      run: |
+        ./gradlew assembleRelease
+    - name: Sign Generated APK files
+      run: |
+        mkdir ./apks
+        git clone https://github.com/xploitednoob/signapk.git
+        java -jar ./signapk/signapk.jar ./signapk/publickey.x509.pem ./signapk/publickey.pk8 ./dragonide/build/outputs/apk/release/dragonide-release-unsigned.apk ./apks/dragonide-release.apk
+    - name: Store generated APK files
+      uses: actions/upload-artifact@v1
+      with:
+        name: app
+        path: ./apks
+
