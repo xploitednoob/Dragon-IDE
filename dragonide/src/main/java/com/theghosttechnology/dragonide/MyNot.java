@@ -41,7 +41,7 @@ public class MyNot extends Service {
                 .setContentTitle("Dragon IDE Running")
                 .setContentText("Running in background")
                 .setSubText("Close your project to stop")
-                .setSmallIcon(R.drawable.ic_notfication)
+                .setSmallIcon(R.drawable.ic_notification)
                 .setChannelId(channelId)
                 .setPriority(importance)
                 .setAutoCancel(false)
