@@ -6,20 +6,24 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
         android:persistent="true"
-        android:hardwareAccelerated="true">
-        <activity
-            android:excludeFromRecents="false"
-            android:persistent="true"
-	    android:label="Dragon IDE"
-            android:windowSoftInputMode="adjustResize|adjustPan"
-            android:launchMode="singleTask"
-		android:icon="@mipmap/ic_codeide"
-            android:roundIcon="@mipmap/ic_codeide"
+        android:hardwareAccelerated="true"
+        android:excludeFromRecents="false"
+        android:persistent="true"
+	android:label="Dragon IDE"
+        android:launchMode="singleTask"
+	android:icon="@mipmap/ic_codeide"
+	android:roundIcon="@mipmap/ic_codeide">
+	<activity
             android:name=".MainActivityCodeHackIDE"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	    android:windowSoftInputMode="adjustResize|adjustPan"
             android:hardwareAccelerated="true"
             android:taskAffinity=".MainActivityCodeHackIDE"
             android:theme="@style/AppTheme">
