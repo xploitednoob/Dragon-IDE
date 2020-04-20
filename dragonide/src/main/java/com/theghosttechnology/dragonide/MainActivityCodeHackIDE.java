@@ -759,7 +759,7 @@ public class MainActivityCodeHackIDE extends AppCompatActivity
             builder.setTitle("About");
             builder.setMessage("Dragon IDE, is the official IDE of the Dragon Mobile Pentest DISTRO\n\n" +
                     "Developed by The Ghost Technology as part of the Android Hacking project a standardization of computer security from smartphones\n\n" +
-                    "Dev: Rabby Sheikh\n\thttp://github.com/xploitednoob");
+                    "Dev: Rabby Sheikh\nhttp://github.com/xploitednoob");
             builder.setIcon(R.drawable.codehack);
 
             String positiveText = getString(android.R.string.ok);
